@@ -23,7 +23,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	readBytes, err := ioutil.ReadFile(os.Args[2])
+	readBytes, err := ioutil.ReadFile(os.Args[1])
 	if err != nil {
 		panic(err.Error())
 	}

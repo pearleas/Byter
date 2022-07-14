@@ -28,7 +28,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	output.WriteString("#include <windows.h>\n\n inline BYTE " + os.Args[2] + "[] = {\n\t")
+	output.WriteString("#pragma once\n\n#include <windows.h>\n\n inline BYTE " + os.Args[2] + "[] = {\n\t")
 	for _, singleByte := range readBytes {
 		output.WriteString(fmt.Sprintf("0x%02X, ", singleByte))
 	}
